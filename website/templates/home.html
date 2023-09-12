@@ -1,0 +1,66 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+
+
+{% block content%}
+
+<div class="container-fluid">
+    
+
+<section class="container-fluid container-lg justify-content-lg-start">
+    <section class="container-fluid">
+        <h2 class="text-light fw-light" >Dobrodošli u Incaffe Online </h2>
+        <h4 class="text-light fw-light">sa vama od 2022</h3>
+    </section>
+    <ul class="list-group p-3 opacity-75">
+        <li class="list-group-item my-2 rounded-0 ">
+            <div class=" row container-fluid">
+                <img src="{{ url_for('static',filename='images/IMG_0042.jpeg') }}" class="col-4 d-none d-md-block" alt="This is img" width="200px" height='360px'>
+                <div class="col ">
+                    <div class="row border-3 border-dark-subtle">
+                        <h1 class="col ">Incaffe</h1>
+                    </div>
+                    <div class="row">
+                        <h3 class="col fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, dicta soluta ipsa minima eos magni.</h3>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item my-2 rounded-0">
+            <div class=" row container-fluid opacity-100" >
+                <img src="{{ url_for('static',filename='images/IMG_0042.jpeg') }}" class="col-4 d-none d-md-block" alt="This is img" width="200px" height='360px'>
+                <div class="col">
+                    <div class="row">
+                        <h1 class="col">Lorem ipsum dolor</h1>
+                    </div>
+                    <div class="row">
+                        <h3 class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, dicta soluta ipsa minima eos magni.</h3>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item my-2 rounded-0">
+            <div class=" row container-fluid opacity-100" >
+                <img src="{{ url_for('static',filename='images/IMG_0042.jpeg') }}" class="col-4 d-none d-md-block" alt="This is img" width="200px" height='360px'>
+                <div class="col">
+                    <div class="row">
+                        <h1 class="col">Lorem ipsum dolor</h1>
+                    </div>
+                    <div class="row">
+                        <h3 class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, dicta soluta ipsa minima eos magni.</h3>
+                    </div>
+                </div>
+            </div>
+        </li>
+      </ul>
+
+</section>
+
+
+
+
+</div>
+
+
+
+
+{% endblock %}

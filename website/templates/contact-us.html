@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Contact Us{% endblock %} 
+
+{% block content %}
+<div class="container-lg pt-3">
+    <div class="row justify-content-around opacity-75">
+      <div class="col">
+        <div class="card shadow-lg" style="width: 18rem;">
+          <p class="card-header font-weight-bold bg-dark-subtle">{{names[1]}}</p>
+          <img src="{{ url_for('static',filename='images/IMG_0042.jpeg') }}" class="card-img-top" alt="This is card">
+          <div class="card-body bg-dark-subtle">
+            <p class="card-text">Evo smo {{names[1]}} i ja najjaci ovde ovo ono.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-5">
+        <div class="card shadow-lg" style="width: 18rem;">
+          <p class="card-header font-weight-bold bg-dark-subtle">{{names[1]}}</p>
+          <img src="{{ url_for('static',filename='images/IMG_0003.jpeg') }}" class="card-img-top " alt="This is card">
+          <div class="card-body bg-dark-subtle">
+            <p class="card-text">Evo smo {{names[1]}} i ja najjaci i ovde ovo ono.</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+
+  
+
+
+
+
+
+{% endblock %}

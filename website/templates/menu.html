@@ -1,0 +1,207 @@
+{% extends "base.html" %} {% block title %}Cenovnik{% endblock %} {% block content
+%}
+
+<div class="accordion accordion-light opacity-75 pb-2 " id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button fw-bold text-light bg-dark btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+          <div class="container-fluid text-left">
+          Bezalkoholna pića <small class="ml-2">gazirana</small>
+        </div>
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse ">
+        <div class="accordion-body">
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                <div class="accordion-body ">
+                    <ul class="list-group ">
+                        {% for ime,cena in data_nonalcohol %}
+                        <li class="list-group-item border-right-0 border-left-0 border-dark-subtle rounded-0">
+                            <div class="container-lg-fluid ">
+                                <div class="row justify-content-around">
+                                    <div class="col-8 fw-bold">{{ime}}</div>
+                                    <div class="col-3 fw-bold text-right">{{cena}}</div>
+                                </div>
+                            </div>
+                        </li>
+                        {%endfor%}
+                        {% for i in range(10) %}
+                        {%endfor%}
+                    </ul>
+                    
+                 </div>
+            </div>
+        </div>
+    </div>   <div class="accordion-item ">
+      <h2 class="accordion-header ml-0">
+        <button class="accordion-button collapsed fw-bold text-light bg-dark btn-outline-dark" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+              <div class="container-fluid text-left">
+                  Bezalkoholna pića <small class="ml-2">negazirana</small>
+              </div>
+            </div>
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse ">
+        <div class="accordion-body ">
+            <ul class="list-group ">
+                {%for ime,cena in data_negazirano%}
+                <li class="list-group-item border-right-0 border-left-0 border-dark-subtle rounded-0">
+                    <div class="container-lg-fluid ">
+                        <div class="row justify-content-around fw-bold">
+                            <div class="col-8">{{ime}}</div>
+                            <div class="col-3 text-right">{{cena}}</div>
+                        </div>
+                    </div>
+                </li>
+                {%endfor%}
+                
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item ">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed fw-bold text-light bg-dark btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+            <div class="row align-items-center">
+              <div class="container-fluid text-left ml-3">
+                Kafe
+              </div>
+            </div>
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse ">
+        <div class="accordion-body ">
+            <ul class="list-group ">
+                {%for ime,cena in data_kafe%}
+                <li class="list-group-item">
+                    <div class="container-lg-fluid ">
+                        <div class="row justify-content-around fw-bold">
+                            <div class="col-8">{{ime}}</div>
+                            <div class="col-3 text-right">{{cena}}</div>
+                        </div>
+                    </div>
+                </li>
+                {%endfor%}
+                
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item ">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed fw-bold text-light bg-dark btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+          <div class="container-fluid">
+            <div class="row justify-content-around align-items-center">
+                <div class="col-6 text-left">Piva</div>
+                <div class="col-6 text-right text-lg-end fw-lighter">samo 18+</div>
+            </div>
+
+          </div>
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+        <div class="accordion-body">
+        <ul class="list-group ">
+        {%for ime,cena in data_piva %}
+            <li class="list-group-item border-right-0 border-left-0 border-dark-subtle rounded-0">
+                <div class="container-lg-fluid ">
+                    <div class="row justify-content-around fw-bold">
+                        <div class="col-8">{{ime}}</div>
+                        <div class="col-3 text-right">{{cena}}</div>
+                    </div>
+                </div>
+            </li>
+        {%endfor%}
+         </ul>       
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-bold text-light bg-dark btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+        <div class="container-fluid">
+            <div class="row justify-content-around align-items-center">
+                <div class="col-6 text-left">Žestoka pića</div>
+                <div class="col-6 text-right text-lg-end fw-lighter">samo 18+</div>
+            </div>
+        </div>
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse ">
+          <div class="accordion-body ">
+              <ul class="list-group ">
+                  {%for ime,cena in data_spirits%}
+                  <li class="list-group-item border-right-0 border-left-0 border-dark-subtle rounded-0">
+                      <div class="container-lg-fluid ">
+                          <div class="row justify-content-around fw-bold">
+                              <div class="col-8">{{ime}}</div>
+                              <div class="col-3 text-right">{{cena}}</div>
+                          </div>
+                      </div>
+                  </li>
+                  {%endfor%}
+                  
+          </div>
+        </div>
+        
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-bold text-light bg-dark btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+            <div class="container-fluid">
+                <div class="row justify-content-around align-items-center">
+                    <div class="col-6 text-left">Kokteli</div>
+                    <div class="col-6 text-right text-lg-end fw-lighter">samo 18+</div>
+                </div>
+            </div>
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse ">
+          <div class="accordion-body ">
+              <ul class="list-group ">
+                  {%for ime,cena in data_kokteli%}
+                  <li class="list-group-item border-right-0 border-left-0 border-dark-subtle rounded-0">
+                      <div class="container-lg-fluid ">
+                          <div class="row justify-content-around fw-bold">
+                              <div class="col-8">{{ime}}</div>
+                              <div class="col-3 text-right">{{cena}}</div>
+                          </div>
+                      </div>
+                  </li>
+                  {%endfor%}
+                  
+          </div>
+        </div>
+        
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-bold text-light bg-dark btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+            <div class="container-fluid">
+                <div class="row justify-content-around align-items-center">
+                    <div class="col-6 text-left">Vina</div>
+                    <div class="col-6 text-right text-lg-end fw-lighter">samo 18+</div>
+                </div>
+            </div>
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse ">
+          <div class="accordion-body ">
+              <ul class="list-group ">
+                  
+                  <li class="list-group-item border-right-0 border-left-0 border-dark-subtle rounded-0">
+                      <div class="container-lg-fluid ">
+                          <div class="row justify-content-around fw-bold">
+                              <div class="col-8">Somersby</div>
+                              <div class="col-3 text-right">210</div>
+                          </div>
+                      </div>
+                  </li>
+                
+                  
+          </div>
+        </div>
+        
+      </div>
+  </div>
+
+{% endblock %}
